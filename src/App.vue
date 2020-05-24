@@ -1,39 +1,45 @@
 <template>
   <div id="app">
 
-    <h1>DATI SITUAZIONE COVID IN ITALIA</h1>
-    
-
-    <template v-for="(value, title) in values">
-      <li :key="value"> {{ title }} : {{ value }} </li>
-      
-    </template>
+    <h1> {{ title }} </h1>
+    <MainCard></MainCard>
 
   </div>
 </template>
 
 <script>
 
-const axios = require('axios');
+import MainCard from './components/MainCard'
 
 export default {
   name: 'App',
   data() {
     return {
-      values: []
+      title: 'Covid-19'
     }
   },
-  mounted() {
-        axios
-          .get('https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale-latest.json')
-          .then(response => {
-              this.values = response.data[0]
-              console.log(this.values)
-          })
-  },
+  components: {
+    MainCard
+  }
 }
+
 </script>
 
 <style scoped>
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+}
 
+h1 {
+  text-align: center;
+  color: red;
+  font-weight: 800;
+}
 </style>
