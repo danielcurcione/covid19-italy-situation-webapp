@@ -1,8 +1,7 @@
 <template>
     <div id="main-card">
+      
       <h3> {{ title }} </h3>
-      <hr>
-
       <MainData></MainData>
         
     </div>
@@ -15,7 +14,7 @@ export default {
   name: 'MainCard',
   data() {
     return {
-      title: 'Dati giornalieri'
+      title: 'Dati di oggi'
     }
   },
   components: {
@@ -27,25 +26,18 @@ export default {
 
 <style scoped>
 #main-card {
-  background-color: rgb(68, 68, 68);
+  background-color: white;
   width: 90%;
   height: max-content;
   margin: 0 auto;
-  border-radius: 10px;
 }
 
 h3 {
   text-align: center;
   line-height: 60px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: bold;
   margin: 0;
-  color: white
-}
-
-hr {
-  width: 90%;
-  border: 0.5px solid white;
-  margin: 0 auto;
-  margin-bottom: 15px;
+  color: black;
 }
 </style>

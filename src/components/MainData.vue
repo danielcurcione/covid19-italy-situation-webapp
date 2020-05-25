@@ -1,10 +1,10 @@
 <template>
   <div id="main-data">
     
-    <template v-for="(value, title) in values">
+    <template v-for="(value, title) in incr_values">
       <div class="mini-card" :key="value">
+        <h2 class="mini-card-value" v-bind:class="title"> +{{ value | formatNumber }} </h2>
         <h3 class="mini-card-title" v-bind:class="title"> {{ title }} </h3>
-        <h2 class="mini-card-value"> {{ value | formatNumber}} </h2>
       </div>
     </template>
 
@@ -22,19 +22,18 @@ Vue.filter("formatNumber", function (value) {
 const axios = require('axios');
 
 export default {
-  name: 'Dati',
+  name: 'MainData',
   data() {
     return {
       values: {
         infetti: null,
         guariti: null,
-        deceduti: null,
-
-        isolamento: null,
-        ospedalizzati: null,
-        intensiva: null,
-
-        tamponi: null
+        deceduti: null
+      },
+      incr_values: {
+        infetti: null,
+        guariti: null,
+        deceduti: null
       }
     }
   },
@@ -43,15 +42,11 @@ export default {
       .get('https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale.json')
       .then(response => {
         var path = response.data[(response.data.length)-1]
-        this.values.infetti = path.totale_positivi
-        this.values.guariti = path.dimessi_guariti
-        this.values.deceduti = path.deceduti
-        
-        this.values.isolamento = path.isolamento_domiciliare
-        this.values.ospedalizzati = path.totale_ospedalizzati
-        this.values.intensiva = path.terapia_intensiva
+        var path_before = response.data[(response.data.length)-2]
 
-        this.values.tamponi = path.tamponi
+        this.incr_values.infetti = path.nuovi_positivi
+        this.incr_values.guariti = path.dimessi_guariti - path_before.dimessi_guariti
+        this.incr_values.deceduti = path.deceduti - path_before.deceduti
       })
   },
 }
@@ -75,10 +70,9 @@ div.mini-card {
 
 h2.mini-card-value {
   margin: 0;
-  margin-top: 5px;
-  font-size: 22px;
+  margin-bottom: 10px;
+  font-size: 20px;
   text-align: center;
-  color: white;
   font-weight: 600;
 }
 
@@ -86,16 +80,15 @@ h3.mini-card-title {
   margin: 0;
   font-size: 15px;
   text-align: center;
-  font-weight: 500;
 }
 .infetti {
-  color: rgb(255, 217, 0);
+  color: #FF9D00;
 }
 .deceduti {
-  color: rgb(255, 65, 65);
+  color: #FF0000;
 }
 .guariti {
-  color: rgb(0, 223, 0);
+  color: #0A8B1E;
 }
 .isolamento, .ospedalizzati, .intensiva, .tamponi {
   color: darkgrey;

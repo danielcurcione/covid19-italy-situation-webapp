@@ -2,6 +2,7 @@
   <div id="app">
 
     <h1> {{ title }} </h1>
+
     <MainCard></MainCard>
 
   </div>
@@ -31,15 +32,15 @@ export default {
   height: 100%;
   margin: 0;
   padding: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: black;
+  background-color: #294181;
 }
 
 h1 {
   text-align: center;
-  color: red;
-  font-weight: 800;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 100px;
 }
 </style>
