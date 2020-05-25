@@ -3,14 +3,18 @@
 
     <h1> {{ title }} </h1>
 
-    <MainCard></MainCard>
+    <DailyCard></DailyCard>
+
+    <SummaryCard></SummaryCard>
 
   </div>
 </template>
 
-<script>
 
-import MainCard from './components/MainCard'
+<script>
+import Vue from 'vue'
+import DailyCard from './components/DailyCard'
+import SummaryCard from './components/SummaryCard'
 
 export default {
   name: 'App',
@@ -20,11 +24,17 @@ export default {
     }
   },
   components: {
-    MainCard
+    DailyCard,
+    SummaryCard
   }
 }
 
+var numeral = require("numeral");
+Vue.filter("formatNumber", function (value) {
+  return numeral(value).format("0,0");
+});
 </script>
+
 
 <style scoped>
 #app {
