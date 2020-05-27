@@ -1,11 +1,13 @@
 <template>
   <div id="app">
 
-    <h1> {{ title }} </h1>
+    <h1>{{ title }}</h1>
 
     <DailyCard></DailyCard>
 
     <SummaryCard></SummaryCard>
+
+    <RegionsCard></RegionsCard>
 
   </div>
 </template>
@@ -15,6 +17,7 @@
 import Vue from 'vue'
 import DailyCard from './components/DailyCard'
 import SummaryCard from './components/SummaryCard'
+import RegionsCard from './components/RegionsCard'
 
 export default {
   name: 'App',
@@ -25,7 +28,8 @@ export default {
   },
   components: {
     DailyCard,
-    SummaryCard
+    SummaryCard,
+    RegionsCard
   }
 }
 
@@ -39,18 +43,18 @@ Vue.filter("formatNumber", function (value) {
 <style scoped>
 #app {
   width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
+  padding-bottom: 50px;
   background-color: #294181;
 }
 
 h1 {
-  text-align: center;
   color: white;
-  font-size: 30px;
-  font-weight: bold;
-  margin: 0;
+  font-size: 35px;
   line-height: 100px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
 }
 </style>
