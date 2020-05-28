@@ -60,7 +60,7 @@ export default {
 
 <style scoped>
 #regions-card {
-  background-color: white;
+  background-color: rgb(42, 42, 42);
   width: 90%;
   height: max-content;
   margin: 0px auto;
@@ -70,6 +70,7 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.1);
+  border-radius: 8px;
 }
 
 div.mini-card {
@@ -85,8 +86,8 @@ div.mini-card {
 h4 {
   width: 45%;
   margin: 5px;
-  font-weight: bold;
   margin-bottom: 15px;
+  color: white;
 }
 
 h2 {

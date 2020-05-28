@@ -53,7 +53,7 @@ export default {
 
 <style scoped>
 #summary-card {
-  background-color: white;
+  background-color: rgb(42, 42, 42);
   width: 90%;
   height: max-content;
   margin: 0px auto;
@@ -63,5 +63,19 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+h2.mini-card-value {
+  color: white;
+}
+h2.infetti {
+  color: rgb(255, 244, 96);
+}
+h2.guariti {
+  color: rgb(111, 255, 133);
+}
+h2.deceduti {
+  color: rgb(255, 97, 97);
 }
 </style>

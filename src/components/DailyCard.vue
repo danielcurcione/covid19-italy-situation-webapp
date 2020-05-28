@@ -20,7 +20,7 @@ export default {
   name: 'DailyCard',
   data() {
     return {
-      title: 'Dati di oggi',
+      title: 'Dati ultimo aggiornamento',
       incr_values: {
         infetti: null,
         guariti: null,
@@ -47,7 +47,7 @@ export default {
 
 <style scoped>
 #daily-card {
-  background-color: white;
+  background-color: rgb(42, 42, 42);
   width: 90%;
   height: max-content;
   margin: 0 auto;
@@ -56,5 +56,6 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);
+  border-radius: 8px;
 }
 </style>

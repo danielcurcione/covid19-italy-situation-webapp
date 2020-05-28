@@ -46,7 +46,7 @@ Vue.filter("formatNumber", function (value) {
   margin: 0;
   padding: 0;
   padding-bottom: 50px;
-  background-color: #294181;
+  background-color: #000000;
 }
 
 h1 {
