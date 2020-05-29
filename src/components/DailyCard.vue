@@ -1,6 +1,6 @@
 <template>
   <div id="daily-card">
-    <h3 class="title"> {{ title }} </h3>
+    <h3 class="title"> {{ title }}: {{ update.date[2] | formatDate }} alle {{ update.time[0] }}:{{ update.time[1] }} </h3>
 
     <template v-for="(value, title) in incr_values">
       <div class="mini-card" :key="value">
@@ -20,7 +20,11 @@ export default {
   name: 'DailyCard',
   data() {
     return {
-      title: 'Dati ultimo aggiornamento',
+      title: 'Aggiornamento',
+      update: {
+        date: [],
+        time: []
+      },
       incr_values: {
         infetti: null,
         guariti: null,
@@ -38,8 +42,16 @@ export default {
         this.incr_values.infetti = path.nuovi_positivi
         this.incr_values.guariti = path.dimessi_guariti - path_before.dimessi_guariti
         this.incr_values.deceduti = path.deceduti - path_before.deceduti
+
+        this.update.date = this.split_info(path.data)[0].split('-');
+        this.update.time = this.split_info(path.data)[1].split(':');
       })
   },
+  methods: {
+    split_info: function(value) {
+      return value.split('T');
+    }
+  }
 }
 
 </script>

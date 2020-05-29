@@ -19,12 +19,13 @@ h6 { font-size: 12px;}
 
 h3.title {
   width: 100%;
-  margin: 15px;
+  margin: 20px;
   text-align: center;
   line-height: 20px;
   font-weight: bold;
+  color: white;
 }
-  
+
 div.mini-card {
   width: 30%;
   text-align: center;
@@ -41,11 +42,11 @@ h4.mini-card-title {
   color: grey;
 }
 .infetti {
-  color: #FF9D00;
+  color: rgb(255, 244, 96);
 }
 .guariti {
-  color: #0A8B1E;
+  color: rgb(111, 255, 133);
 }
 .deceduti {
-  color: #FF0000;
+  color: rgb(255, 97, 97);
 }
