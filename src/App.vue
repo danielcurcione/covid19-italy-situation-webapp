@@ -34,7 +34,7 @@ export default {
   data() {
     return {
       title: 'Covid-19 Italia',
-      fase: 'FASE 2'
+      fase: 'FASE 3'
     }
   },
   components: {
@@ -78,7 +78,7 @@ h1 {
 h3 {
   margin: 0;
   text-align: center;
-  color: rgb(245, 131, 131);
+  color: rgb(72, 215, 237);
   animation: title-anim 2s infinite;
   padding-top: 10px;
   padding-bottom: 50px;
@@ -103,7 +103,7 @@ img {
 
 @keyframes title-anim {
   0% {
-    color: rgb(245, 131, 131);
+    color: rgb(72, 215, 237);
   }
 
   50% {
