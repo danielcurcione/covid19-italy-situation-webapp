@@ -3,12 +3,8 @@
 
     <h1>{{ title }}</h1>
     <h3>{{ fase }}</h3>
-
-    <DailyCard></DailyCard>
-
-    <SummaryCard></SummaryCard>
-
-    <RegionsCard></RegionsCard>
+    
+    <SectionSwitch></SectionSwitch>
 
     <div id="credits">
       <h4> Powered by Daniel Curcione </h4>
@@ -16,7 +12,6 @@
       <a href="https://www.gitlab.com/daniel.curcione">       <img src="./assets/gitlab-logo.svg">    </a>
       <a href="https://www.facebook.com/daniel.curcione.1">   <img src="./assets/facebook-logo.svg">  </a>
       <a href="https://www.instagram.com/daniel_curcione/">   <img src="./assets/instagram-logo.svg"> </a>
-      
     </div>
 
   </div>
@@ -25,9 +20,7 @@
 
 <script>
 import Vue from 'vue'
-import DailyCard from './components/DailyCard'
-import SummaryCard from './components/SummaryCard'
-import RegionsCard from './components/RegionsCard'
+import SectionSwitch from './components/SectionSwitch'
 
 export default {
   name: 'App',
@@ -38,9 +31,7 @@ export default {
     }
   },
   components: {
-    DailyCard,
-    SummaryCard,
-    RegionsCard
+    SectionSwitch
   }
 }
 
@@ -60,7 +51,9 @@ Vue.filter("formatDate", function (value) {
 <style scoped>
 #app {
   width: 100%;
-  margin: 0;
+  max-width: 700px;
+  min-width: 300px;
+  margin: 0 auto;
   padding: 0;
   padding-bottom: 40px;
   background-color: #000000;

@@ -60,7 +60,7 @@ export default {
 <style scoped>
 #daily-card {
   background-color: rgb(42, 42, 42);
-  width: 90%;
+  width: 100%;
   height: max-content;
   margin: 0 auto;
   display: flex;

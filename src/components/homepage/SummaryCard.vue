@@ -54,7 +54,7 @@ export default {
 <style scoped>
 #summary-card {
   background-color: rgb(42, 42, 42);
-  width: 90%;
+  width: 100%;
   height: max-content;
   margin: 0px auto;
   margin-top: 20px;

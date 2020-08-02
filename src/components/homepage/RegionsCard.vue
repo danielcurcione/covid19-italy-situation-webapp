@@ -2,6 +2,14 @@
   <div id="regions-card">
     <h3 class="title"> {{ title }} </h3>
 
+    <div class="index">
+      <div class="title">
+        <h5> infetti attuali </h5>
+        <h5> guariti totali </h5>
+        <h5> deceduti totali </h5>
+      </div>
+    </div>
+
     <template v-for="obj in regions_values">
       <div class="mini-card" :key="obj.name">
         <h4 class="mini-card-title"> {{ obj.name }} </h4>
@@ -61,7 +69,7 @@ export default {
 <style scoped>
 #regions-card {
   background-color: rgb(42, 42, 42);
-  width: 90%;
+  width: 100%;
   height: max-content;
   margin: 0px auto;
   margin-top: 20px;
@@ -71,6 +79,28 @@ export default {
   justify-content: center;
   box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.1);
   border-radius: 8px;
+}
+
+div.index {
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+div.index div.title {
+  width: 57%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+div.index div.title h5 {
+  color: grey;
+  width: 100%;
+  margin: 0 5px;
+  text-align: center;
+  font-size: 12px;
 }
 
 div.mini-card {
@@ -86,6 +116,7 @@ div.mini-card {
 h4 {
   width: 45%;
   margin: 5px;
+  margin-left: 0;
   margin-bottom: 15px;
   color: white;
 }
