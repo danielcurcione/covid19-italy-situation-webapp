@@ -4,8 +4,8 @@
     <h3 class="title"> {{ title }} </h3>
     
     <area-chart
-      :data="guariti"
-      width="'100%'" height="250px" :legend="false" min="0" max="8200"
+      :data="deceduti"
+      width="'100%'" height="250px" :legend="false" min="0" max="1000"
       :dataset="{ 
                   width: '100%',
                   height: '250px',
@@ -25,7 +25,7 @@ export default {
   name: 'SecondaryChart',
   data() {
     return {
-      title: 'Guariti giornalieri',
+      title: 'Deceduti giornalieri',
     }
   },
   props: ['guariti','deceduti']
