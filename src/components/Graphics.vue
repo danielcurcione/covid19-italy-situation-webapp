@@ -1,7 +1,7 @@
 <template>
   <div id="graphics">
 
-    <MainChart :infetti="infetti" :key="1"></MainChart>
+    <MainChart :infetti="infetti" :maxInfetti="maxInfetti" :key="1"></MainChart>
     <SecondaryChart :guariti="guariti" :deceduti="deceduti" :key="2"></SecondaryChart>
 
   </div>
@@ -21,6 +21,7 @@ export default {
   },
   data() {
     return {
+      maxInfetti: 0,
       infetti: [],
       guariti: [],
       deceduti: [],
@@ -40,7 +41,9 @@ export default {
           var infetti = response.data[i].totale_positivi
           var deceduti = response.data[i].deceduti - response.data[i-1].deceduti
           var guariti = response.data[i].dimessi_guariti - response.data[i-1].dimessi_guariti
-          
+          var max = response.data[i].totale_positivi
+
+          this.maxInfetti = ((this.maxInfetti < max) ? max : this.maxInfetti)
           this.infetti.push([data, infetti])
           this.deceduti.push([data, deceduti])
           this.guariti.push([data, guariti])

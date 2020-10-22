@@ -5,7 +5,7 @@
     
     <area-chart
       :data="infetti"
-      width="100%" height="250px" :legend="false" min="0" thousands=" "
+      width="100%" height="250px" :legend="false" min="0" :max="maxInfetti" thousands=" "
       :dataset="{ 
                   width:'100%',
                   height: '250px',
@@ -27,7 +27,7 @@ export default {
       title: 'Andamento infetti',
     }
   },
-  props: ['infetti']
+  props: ['infetti', 'maxInfetti']
 }
 </script>
 
