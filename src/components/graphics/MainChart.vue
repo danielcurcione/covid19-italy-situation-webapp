@@ -5,7 +5,7 @@
     
     <area-chart
       :data="infetti"
-      width="100%" height="250px" :legend="false" min="0" max="120000" thousands=" "
+      width="100%" height="250px" :legend="false" min="0" thousands=" "
       :dataset="{ 
                   width:'100%',
                   height: '250px',
