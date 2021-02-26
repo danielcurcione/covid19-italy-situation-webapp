@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       title: 'Covid-19 Italia',
-      fase: 'FASE 4'
+      fase: 'FASE 3'
     }
   },
   components: {
