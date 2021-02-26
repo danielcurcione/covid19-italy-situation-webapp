@@ -63,6 +63,7 @@ export default {
   width: 100%;
   height: max-content;
   margin: 0 auto;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

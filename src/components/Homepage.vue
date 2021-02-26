@@ -1,6 +1,7 @@
 <template>
   <div id="homepage">
 
+    <VaccineCard></VaccineCard>
     <DailyCard></DailyCard>
     <SummaryCard></SummaryCard>
     <RegionsCard></RegionsCard>
@@ -10,6 +11,7 @@
 
 
 <script>
+import VaccineCard from './homepage/VaccineCard'
 import DailyCard from './homepage/DailyCard'
 import SummaryCard from './homepage/SummaryCard'
 import RegionsCard from './homepage/RegionsCard'
@@ -17,6 +19,7 @@ import RegionsCard from './homepage/RegionsCard'
 export default {
   name: 'Homepage',
   components: {
+    VaccineCard,
     DailyCard,
     SummaryCard,
     RegionsCard
