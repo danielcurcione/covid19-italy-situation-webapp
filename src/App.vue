@@ -13,7 +13,7 @@
       <a href="https://www.facebook.com/daniel.curcione.1">   <img src="./assets/facebook-logo.svg">  </a>
       <a href="https://www.instagram.com/daniel_curcione/">   <img src="./assets/instagram-logo.svg"> </a>
     </div>
-    
+
   </div>
 </template>
 
