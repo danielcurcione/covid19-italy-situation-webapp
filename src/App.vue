@@ -9,11 +9,11 @@
     <div id="credits">
       <h4> Powered by Daniel Curcione </h4>
       <a href="https://www.linkedin.com/in/danielcurcione/">  <img src="./assets/linkedin-logo.svg">  </a>
-      <a href="https://www.gitlab.com/daniel.curcione">       <img src="./assets/gitlab-logo.svg">    </a>
+      <a href="https://www.github.com/danielcurcione/">       <img src="./assets/github-logo.svg">    </a>
       <a href="https://www.facebook.com/daniel.curcione.1">   <img src="./assets/facebook-logo.svg">  </a>
       <a href="https://www.instagram.com/daniel_curcione/">   <img src="./assets/instagram-logo.svg"> </a>
     </div>
-
+    
   </div>
 </template>
 
@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       title: 'Covid-19 Italia',
-      fase: 'FASE 3'
+      fase: 'FASE 4'
     }
   },
   components: {
