@@ -1,7 +1,7 @@
 <template>
   <div id="homepage">
 
-    <VaccineCard></VaccineCard>
+    <!-- <VaccineCard></VaccineCard> -->
     <DailyCard></DailyCard>
     <SummaryCard></SummaryCard>
     <RegionsCard></RegionsCard>
